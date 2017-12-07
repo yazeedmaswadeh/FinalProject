@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Bookstore</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<h1>Add Booking</h1>
+
+	<div>
+		<div class="table table-striped">
+
+
+			<form th:object="${student}" th:action="@{save}" action="#"
+				method="post" class="Container-fluid">
+
+				<label for="firstname">Firstname</label> <input type="text"
+					id="firstname" th:field="*{firstname}" />
+				<div style="clear: both; display: block; height: 10px;"></div>
+
+				<label for="lastname">Lastname</label> <input type="text"
+					id="lastname" th:field="*{lastname}" />
+				<div style="clear: both; display: block; height: 10px;"></div>
+
+				<label for="email">Email</label> <input type="text"
+					th:field="*{email}" />
+				<div style="clear: both; display: block; height: 10px;"></div>
+
+				<label for="studentnumber">Studentnumber</label> <input type="text"
+					th:field="*{studentnumber}" />
+				<div style="clear: both; display: block; height: 10px;"></div>
+
+
+				<label for="time">Time</label>  
+				<select id="time" th:field="*{time}" class="form-control">
+				<option value = "08.00 AM">08.00 AM</option>
+             <option value = "09.00 AM">09.00 AM</option>
+             <option value = "10.00 AM">10.00 AM</option>
+             <option value = "11.00 AM">11.00 AM</option>
+             <option value = "12.00 PM">12.00 PM</option>
+             <option value = "13.00 PM">13.00 PM</option>
+             <option value = "14.00 PM">14.00 PM</option>
+             <option value = "15.00 PM">15.00 PM</option>
+				</select>
+				
+
+				
+
+
+
+
+
+				<div style="clear: both; display: block; height: 10px;"></div>
+
+				<div style="clear: both; display: block; height: 10px;"></div>
+				<input type="submit" value="Save"></input>
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>

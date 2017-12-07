@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booklist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}"/>
+        
+</head>
+
+<body>
+	<h1>Edit booking</h1>
+	<div>
+	
+	<form th:object="${student}" th:action="@{../save}" action="#" method="post">
+
+	   
+	<input type="hidden" th:field="*{Id}" class="form-control"/>
+	    <input type="text" th:field="*{firstname}" />
+	    <input type="text" th:field="*{lastname}" />
+	    <input type="text" th:field="*{email}" />
+	    <input type="text" th:field="*{studentnumber}" />
+	    
+				<label for="time"></label>  
+				<select id="time" th:field="*{time}" class="form-control">
+				<option value = "08.00 AM">08.00 AM</option>
+             <option value = "09.00 AM">09.00 AM</option>
+             <option value = "10.00 AM">10.00 AM</option>
+             <option value = "11.00 AM">11.00 AM</option>
+             <option value = "12.00 PM">12.00 PM</option>
+             <option value = "13.00 PM">13.00 PM</option>
+             <option value = "14.00 PM">14.00 PM</option>
+             <option value = "15.00 PM">15.00 PM</option>
+				</select>
+		
+	     <input type="submit" class="btn btn-success" value="Save"></input>
+	</form>
+	
+	</div>
+</body>
+</html>
+
+
+
+
